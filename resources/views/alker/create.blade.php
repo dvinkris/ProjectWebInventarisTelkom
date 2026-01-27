@@ -50,6 +50,11 @@
         <input type="text" name="lokasi">
     </div>
 
+    <div class="form-group">
+        <label>Terakhir Dikalibrasi</label>
+        <input type="date" name="terakhir_dikalibrasi">
+    </div>
+
     <div class="form-actions">
         <a href="{{ route('alkers.index') }}" class="btn btn-secondary">
             Kembali

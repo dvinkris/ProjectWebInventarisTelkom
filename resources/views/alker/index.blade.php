@@ -25,6 +25,7 @@
             <th>Jumlah</th>
             <th>Kondisi</th>
             <th>Lokasi</th>
+            <th>Terakhir Dikalibrasi</th>
             <th>Aksi</th>
         </tr>
     </thead>
@@ -39,6 +40,11 @@
             <td>{{ $alker->jumlah }}</td>
             <td>{{ $alker->kondisi }}</td>
             <td>{{ $alker->lokasi }}</td>
+            <td>
+                {{ $alker->terakhir_dikalibrasi 
+                    ? date('d-m-Y', strtotime($alker->terakhir_dikalibrasi)) 
+                    : '-' }}
+            </td>
             <td>
                 <div class="action-buttons">
                     <a href="{{ route('alkers.edit', $alker->id) }}" class="btn btn-edit">

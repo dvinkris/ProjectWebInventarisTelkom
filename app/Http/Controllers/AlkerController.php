@@ -27,9 +27,18 @@ class AlkerController extends Controller
             'jumlah'     => 'required|integer|min:1',
             'kondisi'    => 'required|in:Baik,Rusak,Perbaikan',
             'lokasi'     => 'required|string|max:255',
+            'terakhir_dikalibrasi' => 'nullable|date',
         ]);
 
-        Alker::create($request->all());
+        Alker::create([
+            'kode_alker' => $request->kode_alker,
+            'nama_alker' => $request->nama_alker,
+            'kategori' => $request->kategori,
+            'jumlah' => $request->jumlah,
+            'kondisi' => $request->kondisi,
+            'lokasi' => $request->lokasi,
+            'terakhir_dikalibrasi' => $request->terakhir_dikalibrasi
+        ]);
 
         return redirect()->route('alkers.index')->with('success', 'Alker berhasil ditambahkan.');
     }
@@ -51,9 +60,18 @@ class AlkerController extends Controller
             'jumlah'     => 'required|integer|min:1',
             'kondisi'    => 'required|in:Baik,Rusak,Perbaikan',
             'lokasi'     => 'required|string|max:255',
+            'terakhir_dikalibrasi' => 'nullable|date',
         ]);
 
-        $alker->update($request->all());
+        $alker->update([
+            'kode_alker' => $request->kode_alker,
+            'nama_alker' => $request->nama_alker,
+            'kategori' => $request->kategori,
+            'jumlah' => $request->jumlah,
+            'kondisi' => $request->kondisi,
+            'lokasi' => $request->lokasi,
+            'terakhir_dikalibrasi' => $request->terakhir_dikalibrasi
+        ]);
 
         return redirect()->route('alkers.index')->with('success', 'Alker berhasil diperbarui.');
     }

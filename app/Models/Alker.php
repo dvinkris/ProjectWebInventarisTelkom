@@ -16,5 +16,6 @@ class Alker extends Model
         'jumlah',
         'kondisi',
         'lokasi',
+        'terakhir_dikalibrasi',
     ];
 }

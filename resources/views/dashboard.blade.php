@@ -58,6 +58,7 @@
                     <th>Jumlah</th>
                     <th>Kondisi</th>
                     <th>Lokasi</th>
+                    <th>Terakhir Kalibrasi</th>
                 </tr>
             </thead>
             <tbody>
@@ -70,6 +71,11 @@
                     <td>{{ $alker->jumlah }}</td>
                     <td>{{ $alker->kondisi }}</td>
                     <td>{{ $alker->lokasi }}</td>
+                    <td>
+                        {{ $alker->terakhir_dikalibrasi 
+                            ? date('d-m-Y', strtotime($alker->terakhir_dikalibrasi)) 
+                            : '-' }}
+                    </td>
                 </tr>
                 @endforeach
             </tbody>
