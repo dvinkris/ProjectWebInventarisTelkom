@@ -6,7 +6,11 @@
 </head>
 <body>
 <header>
-    <h2>Inventaris Aset Telkom</h2>
+    <h2>    
+        <a href="{{ url('/') }}" class="brand-link">
+        Inventaris Aset Telkom
+        </a>
+    </h2>
     <nav>
         <a href="{{ route('alkers.index') }}">Alker</a>
         <a href="{{ route('salkers.index') }}">Salker</a>
