@@ -3,6 +3,11 @@ import forms from '@tailwindcss/forms';
 
 /** @type {import('tailwindcss').Config} */
 export default {
+<<<<<<< HEAD
+    darkMode: 'class',
+
+=======
+>>>>>>> f68f6cdbc853c53cc75033861251d15a729cc2f5
     content: [
         './vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php',
         './storage/framework/views/*.php',

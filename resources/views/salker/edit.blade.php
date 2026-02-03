@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.appex')
 
 @section('content')
 <div class="form-card">

@@ -1,16 +1,17 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
 
 <h2 id="judulhalaman">Data Sarana Kerja (Salker)</h2>
 
-<a href="{{ route('salkers.create') }}" class="btn btn-primary">
-    + Tambah Salker
-</a>
+<div class="page-actions">
+    <a href="{{ route('salkers.create') }}" class="btn btn-primary">
+        + Tambah Salker
+    </a>
+</div>
 
 @if(session('success'))
-<div class="alert-success">
+<div class="alert-success alert-space">
     {{ session('success') }}
 </div>
 @endif
